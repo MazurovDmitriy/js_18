@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript - 10-12</title>
+
+	<link rel="stylesheet" href="css/style.main.css">
+
+	<script src="js/script.main.min.js"></script>
+
+	
+</head>
+<body>
+
+	<div class="wrapper">
+		<h2>Карусель</h2>
+
+		
+		<div  class="carousel">
+			<div class="carousel-arrow-left">&lsaquo;</div>
+
+			<div class="carousel-hider">
+				<ul class="carousel-list">
+					<li class="carousel-element"><img src="img/carousel/img1.jpg" alt=""><p>Описание 1</p></li>
+					<li class="carousel-element"><img src="img/carousel/img2.jpg" alt=""><p>Описание 2</p></li>
+					<li class="carousel-element"><img src="img/carousel/img3.jpg" alt=""><p>Описание 3</p></li>
+					<li class="carousel-element"><img src="img/carousel/img4.jpg" alt=""><p>Описание 4</p></li>
+					<li class="carousel-element"><img src="img/carousel/img5.jpg" alt=""><p>Описание 5</p></li>
+					<li class="carousel-element"><img src="img/carousel/img6.jpg" alt=""><p>Описание 6</p></li>
+				</ul>
+			</div>
+			<div class="carousel-arrow-right">&rsaquo;</div>
+		</div>
+
+	</div>
+
+	<div class="wrapper">
+		<h2>Новости</h2>
+		<div class="news" id="news"></div>
+	</div>
+	
+	<script type="text/html" id="news_template">
+		<% for ( var i = 0; i < data.length; i++ ) { %>
+		<div class="news__item">
+			<h3 class="news__title"><%=data[i].name%></h3>
+			<div class="news__date"><%=data[i].date%></div>
+			<p class="news__text"><%=data[i].text%></p>
+		</div>
+		<% } %>
+	</script>
+	
+
+</body>
+</html>
